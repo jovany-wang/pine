@@ -1,7 +1,7 @@
 package org.pine.api;
 
-public abstract class PineLiker {
+public interface PineLiker {
 
-  public abstract LikerTopic topic(String name);
+  LikerTopic topic(String name);
 
 }
