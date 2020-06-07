@@ -4,14 +4,15 @@ public final class Pine {
 
   private static PineRuntime runtime;
 
+  @SuppressWarnings("unchecked")
   public static void init(String mode) {
 
     String factoryName;
 
     if (mode.equals("distkv")) {
-      factoryName = "com.distkv.pine.distkvimpl.DistkvImplPineRuntimeFactory";
+      factoryName = "org.pine.distkvimpl.DistkvImplPineRuntimeFactory";
     } else {
-      factoryName = "com.distkv.pine.redisimpl.RedisImplPineRuntimeFactory";
+      factoryName = "org.pine.distkvimpl.RedisImplPineRuntimeFactory";
     }
 
     try {
