@@ -1,5 +1,6 @@
 package org.pine.distkvimpl;
 
+import com.distkv.client.DefaultDistkvClient;
 import com.distkv.client.DistkvClient;
 import com.distkv.common.exception.DistkvException;
 import org.pine.api.PineLiker;
@@ -26,4 +27,7 @@ public class PineRuntimeDistkvImpl implements PineRuntime {
     return new PineLikerDistkvImpl(distkvClient);
   }
 
+  public void connect(String address) {
+    distkvClient = new DefaultDistkvClient(address);
+  }
 }

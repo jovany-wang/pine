@@ -11,8 +11,8 @@ public class BasicTest {
 
   @Test
   public void basicTest() {
-    Pine.init("distkv")
-    ;
+    Pine.init("distkv", "127.0.0.1:34222");
+
     PineLiker liker = Pine.newLiker();
     liker.topic("nihao").likesFrom("zhangsan");
     liker.topic("nihao").likesFrom("zhangsan");

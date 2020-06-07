@@ -5,7 +5,7 @@ public final class Pine {
   private static PineRuntime runtime;
 
   @SuppressWarnings("unchecked")
-  public static void init(String mode) {
+  public static void init(String mode, String address) {
 
     String factoryName;
 
@@ -20,6 +20,7 @@ public final class Pine {
       PineRuntimeFactory factory = (PineRuntimeFactory) clz.getDeclaredConstructor().newInstance();
       if (runtime == null) {
         runtime = factory.createPineRuntime();
+        runtime.connect(address);
       }
     } catch (Exception e) {
       throw new RuntimeException("Failed to initialize Pine runtime.", e);
