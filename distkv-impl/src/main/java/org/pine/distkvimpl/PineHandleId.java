@@ -26,7 +26,7 @@ public class PineHandleId implements Serializable {
   }
 
   public String hex() {
-    return DatatypeConverter.printHexBinary(data).toLowerCase();
+    return HexadecimalUtil.parseByte2Hexstr(data).toLowerCase();
   }
 
   @Override
