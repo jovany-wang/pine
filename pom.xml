@@ -12,6 +12,7 @@
         <module>api</module>
         <module>distkv-impl</module>
         <module>test</module>
+      <module>redis-impl</module>
     </modules>
 
 
