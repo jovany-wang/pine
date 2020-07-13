@@ -11,7 +11,8 @@ public class BasicTest {
 
   @Test
   public void basicTest() {
-    Pine.init("distkv", "127.0.0.1:34222");
+    Pine.init("redis", "121.199.43.220:6379:wp123456",2);
+    // Pine.init("distkv", "127.0.0.1:8082");
 
     PineLiker liker = Pine.newLiker();
     liker.topic("nihao").likesFrom("zhangsan");
@@ -19,7 +20,6 @@ public class BasicTest {
     Assert.assertEquals(liker.topic("nihao").count(), 1);
     liker.topic("nihao").likesFrom("lisi");
     Assert.assertEquals(liker.topic("nihao").count(), 2);
-
     Assert.assertTrue(liker.topic("nihao").unlikesFrom("zhangsan"));
     Assert.assertFalse(liker.topic("nihao2").unlikesFrom("zhangsan"));
     Assert.assertEquals(liker.topic("nihao").count(), 1);

@@ -7,4 +7,6 @@ public interface PineRuntime {
   PineLiker newLiker();
 
   void connect(String address);
+
+  void select(int index);
 }

@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>test</artifactId>
-
+    <artifactId>redis-impl</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.distkv</groupId>
@@ -19,27 +18,15 @@
         </dependency>
         <dependency>
             <groupId>com.distkv</groupId>
-            <artifactId>distkv-impl</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <artifactId>distkv-client</artifactId>
+            <version>0.1.4-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.distkv</groupId>
-            <artifactId>redis-impl</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.0.0</version>
-
-        </dependency>
-        <dependency>
-            <groupId>com.distkv</groupId>
-            <artifactId>api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
+
 
 </project>

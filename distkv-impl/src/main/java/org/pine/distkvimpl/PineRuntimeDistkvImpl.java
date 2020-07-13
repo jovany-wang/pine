@@ -30,4 +30,9 @@ public class PineRuntimeDistkvImpl implements PineRuntime {
   public void connect(String address) {
     distkvClient = new DefaultDistkvClient(address);
   }
+
+  @Override
+  public void select(int index) {
+
+  }
 }
