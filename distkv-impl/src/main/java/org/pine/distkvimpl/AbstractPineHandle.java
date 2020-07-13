@@ -20,5 +20,6 @@ public abstract class AbstractPineHandle {
 
   protected abstract String getComponentType();
 
+
 }
 
