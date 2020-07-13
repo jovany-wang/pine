@@ -4,16 +4,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.distkv</groupId>
-    <artifactId>pine</artifactId>
-    <packaging>pom</packaging>
+    <groupId>org.pine</groupId>
+    <artifactId>pine-api</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>api</module>
-        <module>distkv-impl</module>
-        <module>test</module>
-        <module>redis-impl</module>
-    </modules>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.distkv</groupId>
+            <artifactId>distkv-client</artifactId>
+            <version>0.1.4-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
 
 
 </project>
