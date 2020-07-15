@@ -6,9 +6,27 @@ A service to provide many useful and out-of-the-box components with adapting man
 - Redis
 
 ## Maven
+basic Maven
+
         <dependency>
             <groupId>com.distkv</groupId>
             <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        
+If you want to use distkv,add the following to maven:
+
+        <dependency>
+            <groupId>com.distkv</groupId>
+            <artifactId>distkv-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        
+If you want to use redis,add the following to maven:
+
+        <dependency>
+            <groupId>com.distkv</groupId>
+            <artifactId>redis-impl</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
