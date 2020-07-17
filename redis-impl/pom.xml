@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>redis-impl</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.distkv</groupId>
@@ -20,6 +21,12 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.distkv</groupId>
+            <artifactId>distkv-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

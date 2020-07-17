@@ -1,6 +1,8 @@
 package org.pine.redisimpl;
 
 
+import org.pine.distkvimpl.PineHandleId;
+
 /**
  * The abstract class `PineHandle` is used to represent
  * a handle of the Pine component.
