@@ -41,7 +41,7 @@ public class PineRuntimeRedisImpl implements PineRuntime {
     }
 
     @Override
-    public void select(int index) {
-        redisClient.select(index);
+    public void select(int databaseIndex) {
+        redisClient.select(databaseIndex);
     }
 }

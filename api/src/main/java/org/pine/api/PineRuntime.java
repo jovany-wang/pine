@@ -8,5 +8,5 @@ public interface PineRuntime {
 
   void connect(String address);
 
-  void select(int index);
+  void select(int databaseIndex);
 }

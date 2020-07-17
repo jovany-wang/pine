@@ -32,7 +32,7 @@ public class PineRuntimeDistkvImpl implements PineRuntime {
   }
 
   @Override
-  public void select(int index) {
+  public void select(int databaseIndex) {
 
   }
 }

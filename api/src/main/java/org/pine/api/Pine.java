@@ -5,7 +5,7 @@ public final class Pine {
   private static PineRuntime runtime;
 
   @SuppressWarnings("unchecked")
-  public static void init(String mode, String address,int index) {
+  public static void init(String mode, String address,int databaseIndex) {
 
     String factoryName;
 
@@ -23,7 +23,7 @@ public final class Pine {
       if (runtime == null) {
         runtime = factory.createPineRuntime();
         runtime.connect(address);
-        runtime.select(index);
+        runtime.select(databaseIndex);
       }
     } catch (Exception e) {
       throw new RuntimeException("Failed to initialize Pine runtime.", e);
