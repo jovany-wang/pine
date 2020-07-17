@@ -7,6 +7,7 @@ A service to provide many useful and out-of-the-box components with adapting man
 
 ## Maven
 basic Maven
+
         <dependency>
             <groupId>com.distkv</groupId>
             <artifactId>api</artifactId>
