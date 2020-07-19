@@ -11,7 +11,9 @@ public class BasicTest {
 
   @Test
   public void basicTest() {
-    Pine.init("distkv", "127.0.0.1:34222");
+    Pine.init("distkv", "127.0.0.1:8082", 0);
+    // Or use : Pine.init("redis", "host:port:password", databaseindex);
+    // like : Pine.init("redis", "127.0.0.1:6379:password", 1);
 
     PineLiker liker = Pine.newLiker();
     liker.topic("nihao").likesFrom("zhangsan");

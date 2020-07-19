@@ -5,12 +5,14 @@ public final class Pine {
   private static PineRuntime runtime;
 
   @SuppressWarnings("unchecked")
-  public static void init(String mode, String address) {
+  public static void init(String mode, String address,int databaseIndex) {
 
     String factoryName;
 
     if (mode.equals("distkv")) {
       factoryName = "org.pine.distkvimpl.DistkvImplPineRuntimeFactory";
+    } else if(mode.equals("redis")) {
+      factoryName = "org.pine.redisimpl.RedisImplPineRuntimeFactory";
     } else {
       factoryName = "org.pine.distkvimpl.RedisImplPineRuntimeFactory";
     }
@@ -21,6 +23,7 @@ public final class Pine {
       if (runtime == null) {
         runtime = factory.createPineRuntime();
         runtime.connect(address);
+        runtime.select(databaseIndex);
       }
     } catch (Exception e) {
       throw new RuntimeException("Failed to initialize Pine runtime.", e);
